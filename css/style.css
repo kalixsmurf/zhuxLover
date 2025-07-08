@@ -1,0 +1,172 @@
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom, #c08e0e, #bc607f);
+  color: #333;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+section {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.hero h1 {
+  font-size: 3.5em;
+  color: #bc607f;
+}
+
+.hero p {
+  font-size:x-large;
+  color: #880e4f;
+}
+
+.reasons {
+  padding: 4rem 2rem;
+  background-color: transparent;
+  text-align: center;
+}
+
+.reasons h2 {
+  font-size: 2.8rem;
+  margin-bottom: 3rem;
+  color: #c53e3e;
+  font-family: 'Segoe Script', cursive;
+  text-shadow: 1px 1px 2px #fff;
+}
+
+.mlbb-story h2 {
+  color: #880e4f;
+}
+
+/* Collage container */
+.photo-collage {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  height: 600px; /* Fixed height to arrange cards freely */
+}
+
+/* Square collage card base */
+.photo-card {
+  width: 220px;
+  height: 220px;
+  position: absolute;
+  background: linear-gradient(270deg, #f76e70, #f8760b, #16a59e, #e025d6, #87bf32, #f76e70); /* fallback soft pink */
+  background-size: 1000% 1000%;
+  animation: gradientShift 10s ease infinite;
+  box-shadow: 0 8px 20px rgba(20, 153, 242, 0.695);
+  border-radius: 16px;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #5e355c;
+  backdrop-filter: blur(4px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+/* Random romantic colors for each card */
+.photo-card:nth-child(1) {
+  top: -10px;
+  left: 200px;
+  background-color: #ffeef2;
+  transform: rotate(-17deg) translate(10px, 50px);
+}
+.photo-card:nth-child(2) {
+  top: 10px;
+  right: 200px;
+  background-color: #fbe4ff;
+  transform: rotate(6deg) translate(-10px, 10px);
+}
+.photo-card:nth-child(3) {
+  top: 250px;
+  left: 150px;
+  background-color: #fff4e6;
+  transform: rotate(12deg) translate(0, 20px);
+}
+.photo-card:nth-child(4) {
+  top: 260px;
+  right: 120px;
+  background-color: #e8f0ff;
+  transform: rotate(25deg) translate(5px, -5px);
+}
+.photo-card:nth-child(5) {
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%) rotate(-7deg);
+  background-color: #f1e0ff;
+}
+
+/* Hover effect */
+.photo-card:hover {
+  transform: scale(1.05) rotate(360deg) !important;
+  z-index: 10;
+}
+
+/* Heart pin */
+.photo-card::before {
+  content: "💖";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.4rem;
+}
+
+/* Text styling */
+.photo-card span {
+  margin-top: 0.5rem;
+  line-height: 1.4;
+}
+
+.mlbb-story {
+  padding-top: 30px;
+}
+
+.scene {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease, transform 1s ease;
+  margin-bottom: 60px;
+}
+
+.scene img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.closing h2 {
+  font-size: 2.8em;
+  color: #880e4f;
+}
+
+.closing p {
+  font-size: 1.7rem;
+  background: linear-gradient(270deg, #f76e70, #fc913a, #f9d423, #eae374, #c9ee91, #f76e70);
+  background-size: 1000% 1000%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientShift 10s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
